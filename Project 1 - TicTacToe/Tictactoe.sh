@@ -3,7 +3,7 @@
 BOARD=("_" "_" "_" "_" "_" "_" "_" "_" "_")
 GAME_TYPE=0
 END_GAME="0"
-POLE=0
+FIELD=0
 PLAYER="X"
 
 trap save_game SIGINT
@@ -84,10 +84,10 @@ function human_move() {
   do=1
   while [ $do -eq 1 ]
   do
-    read -p "${PLAYER} wpisz numer pola: " POLE
-    if [[ ${BOARD[${POLE}]} == "_" ]]
+    read -p "${PLAYER} wpisz numer pola: " FIELD
+    if [[ ${BOARD[${FIELD}]} == "_" ]]
     then
-      BOARD[${POLE}]="${PLAYER}"
+      BOARD[${FIELD}]="${PLAYER}"
       do=0
     fi
   done

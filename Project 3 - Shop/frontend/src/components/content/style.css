@@ -1,0 +1,20 @@
+.content {
+    background-color: #F2F2F2;
+    padding-top: 250px;
+    min-height: 90vh;
+}
+.content .card .card-footer {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.content .card .card-footer .btn {
+    border: 1px solid #404040;
+    color: #000000;
+}
+.content .card .card-footer .btn:hover {
+    background: #404040;
+    color: #F2F2F2;
+}

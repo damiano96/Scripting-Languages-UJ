@@ -1,0 +1,40 @@
+header {
+    background: #0D6BA6;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    color: #F2F2F2;
+}
+header a {
+    color: #F2F2F2;
+    text-decoration: none;
+}
+header a:hover{
+    color: #F2F2F2;
+}
+.header-body {
+    width: 100%;
+}
+.header-body > div {
+    display: flex;
+    align-items: stretch;
+}
+.right-side-header {
+    justify-content: flex-end;
+}
+.logo-header {
+    justify-content: center;
+    font-weight: bold;
+}
+.logo-header span {
+    align-self: center;
+}
+.header-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header-item:hover {
+    background: #A6A6A6;
+}

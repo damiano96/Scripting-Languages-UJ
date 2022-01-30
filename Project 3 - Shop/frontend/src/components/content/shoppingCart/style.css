@@ -1,0 +1,29 @@
+.summary-shopping-cart {
+    background: #0D6BA6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F2F2F2;
+    max-height: 500px;
+}
+.summary-shopping-cart label {
+    font-weight: bold;
+}
+.summary-cost {
+    padding: 5px 20px 0 20px;
+    margin-top: 20px;
+}
+.checkout-order {
+    margin-top: 30px;
+    padding-right: 10px;
+}
+.close-shopping-modal {
+
+}
+.plus-minus-buttons {
+    padding: 5px;
+    cursor: pointer;
+}
+.title {
+    margin-bottom: 20px;
+}

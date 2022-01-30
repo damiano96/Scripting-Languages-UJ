@@ -1,0 +1,24 @@
+{
+  "name": "shop-api",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/config/Server.js",
+    "start": "src/config/Server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "helmet": "^5.0.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

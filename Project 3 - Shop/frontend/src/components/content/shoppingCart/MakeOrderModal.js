@@ -13,7 +13,7 @@ const MakeOrderModal = ({isOpened, name, surname, address}) => {
         if (isOpened) {
             setOpenOrderModal(isOpened)
         }
-    })
+    }, [isOpened])
 
     useEffect(() => {
         const modal = new Modal(modalRef.current,  { backdrop: 'static' });

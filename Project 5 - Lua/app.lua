@@ -7,6 +7,21 @@ local capture_errors = app_helpers.capture_errors
 
 local app = lapis.Application()
 
+app:get('/', function(self)
+  information = {}
+  information[1] = "Mala dokumentacja zwiazana z dostepnymi metodami:"
+  information[2] = "============================================================="
+  information[3] = "/products/all => Metoda GET wyswietla wszystkie produkty"
+  information[4] = "/products/:product_id => Metoda GET wyswietla informacje o produkcie z konkretnym ID"
+  information[5] = "/categories => Metoda GET wyswietla wszystkie dostepne kategorie"
+  information[6] = "/categories/:category => Metoda GET wyswietla wszystkie dostepne produkty w podanej kategorii"
+  information[7] = "/products/delete => Metoda DELETE usuwa produkt o konrektnym ID przeslanym parametrem"
+  information[8] = "/products/add => Metoda POST dodaje nowy produkt do bazy. Jako parametr nalezy przeslac obiekt o polach: name, price, year, category_name"
+
+  return table.concat(information,"<br>")
+  
+end)
+
 app:get("/products/:product_id", function(self)
   local productID = self.params.product_id
   local Products = Model:extend("products")
@@ -54,15 +69,16 @@ app:post("/products/add", capture_errors({
 }))
 
 app:delete("/products/delete", function(self)
-  local product_id = self.params.id_product
+  local product_id = self.params.product_id
   local Products = Model:extend("products")
 
   local product = Products:find(product_id)
 
-  if product then
+  if (product) 
+  then
     product:delete()
     return {
-      json = "Pomyslnie usunieto produkt"
+      json = "Pomyslnie usunieto produkt",
       status = 200
     }
   end

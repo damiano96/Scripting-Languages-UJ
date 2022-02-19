@@ -1,0 +1,122 @@
+version: "3.0"
+
+nlu:
+#  generated from rasa
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+# nlu for restaurant
+- lookup: day
+  examples: |
+    - monday
+    - tuesday
+    - wednesday
+    - thursday
+    - friday
+    - saturday
+    - sunday
+- intent: open
+  examples: |
+    - What time do you open?
+    - When are you open?
+    - Is restaurant open at [monday](day) [11](hour)?
+    - Is restuarant open on [tuesday](day) [14](hour)?
+    - Can i eat on [wednesday](day) [15](hour)?
+    - Is open on [thursday](day) [12](hour)?
+    - Can i order a meal on [friday](day) [6](hour)?
+    - Can i order a meal at [saturday](day) [8](hour)?
+    - Can i come to restaurant at [sunday](day) [7](hour)?
+    - Is restaurant open at [12](hour)?
+
+- intent: show_menu
+  examples: |
+    - What can i order?
+    - What meals do you have in menu?
+    - What can i eat?
+    - Can you show me a menu?

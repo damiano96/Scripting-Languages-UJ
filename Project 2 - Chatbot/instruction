@@ -2,7 +2,7 @@ First console:
     rasa run
 
 Second console:
-    rasa run action
+    rasa run actions
 
 Third console:
     python3 connect.py

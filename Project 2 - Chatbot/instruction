@@ -1,0 +1,8 @@
+First console:
+    rasa run
+
+Second console:
+    rasa run action
+
+Third console:
+    python3 connect.py
